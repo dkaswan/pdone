@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact Us{% endblock title %}
+
+{% block body %}
+<div class="container py-5">
+    <h1 class="text-center">Contact Us</h1>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="name" class="form-label">Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Full Name"
+                value="John Doe">
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email Address"
+                aria-describedby="emailHelp" value="john@doe.com">
+            <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="phone" class="form-label">Phone Number</label>
+            <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter Your Phone Number"
+                aria-describedby="phoneHelp" value="9876543210">
+            <div id="phoneHelp" class="form-text">We'll never share your phone number with anyone else.</div>
+        </div>
+        <div class="mb-3">
+            <label for="message" class="form-label">Message</label>
+            <textarea class="form-control" name="message" id="message" cols="30"
+                rows="10">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi, possimus illo. Delectus iure architecto minima. Nesciunt officiis tempora hic ipsam sed placeat architecto, labore molestias blanditiis explicabo molestiae dolores iusto culpa distinctio, quisquam quos sunt tempore fugit ut et. Blanditiis!</textarea>
+        </div>
+        <button type="submit" class="btn btn-block w-100 btn-primary">Submit</button>
+    </form>
+</div>
+
+{% endblock body %}
