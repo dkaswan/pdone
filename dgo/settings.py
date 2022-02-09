@@ -128,5 +128,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Added manually
 STATICFILES_DIRS = [
     BASE_DIR / "static",
+    # "Volumes/WORKSPACE/python_projects/pdone/static",
     # '/var/www/static/',
 ]
